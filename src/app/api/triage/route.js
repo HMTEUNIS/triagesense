@@ -27,14 +27,6 @@ function calculateAge(dob) {
   return age;
 }
 
-// Helper function to determine sex (placeholder - in real app, collect this data)
-function determineSex(name) {
-  // This is a placeholder implementation
-  // In a real application, you would collect this information from the patient
-  // For now, we'll default to 'male' - you should modify this based on your needs
-  return 'male';
-}
-
 // Helper function to call DeepSeek API for medical diagnosis
 async function getDiagnosisFromDeepSeek(symptoms, age, sex, discomfort) {
   const deepSeekApiKey = process.env.DEEPSEEK_API_KEY;
@@ -79,7 +71,7 @@ async function getDiagnosisFromDeepSeek(symptoms, age, sex, discomfort) {
     let diagnosisData;
     try {
       diagnosisData = JSON.parse(content);
-    } catch (parseError) {
+    } catch {
       console.error('Failed to parse API response');
       throw new Error('Invalid response from AI service');
     }
@@ -333,7 +325,7 @@ export async function POST(request) {
       await sendSlackMessage(slackMessage);
       console.log('Slack notification sent successfully');
       
-    } catch (slackError) {
+    } catch {
       // Log error without exposing sensitive details
       console.error('Slack notification failed');
       // Don't fail the entire request if Slack fails

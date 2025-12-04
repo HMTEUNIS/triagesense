@@ -138,12 +138,12 @@ export default function LearnMore() {
                 <div className="border-l-4 border-blue-500 pl-6">
                   <h4 className="text-lg font-semibold text-gray-900 mb-2">1. Symptom Parsing</h4>
                   <p className="text-gray-600 mb-2">
-                    Patient symptoms are sent to Infermedica's Parse API, which converts natural language 
+                    Patient symptoms are sent to Infermedica&apos;s Parse API, which converts natural language 
                     into structured medical evidence using advanced NLP.
                   </p>
                   <div className="bg-gray-50 p-3 rounded text-sm font-mono">
                     POST /v3/parse<br/>
-                    Input: "I have severe headache and fever"<br/>
+                    Input: &quot;I have severe headache and fever&quot;<br/>
                     Output: Structured evidence objects
                   </div>
                 </div>
@@ -151,7 +151,7 @@ export default function LearnMore() {
                 <div className="border-l-4 border-green-500 pl-6">
                   <h4 className="text-lg font-semibold text-gray-900 mb-2">2. AI Diagnosis</h4>
                   <p className="text-gray-600 mb-2">
-                    The structured evidence is analyzed by Infermedica's Diagnosis API, which uses 
+                    The structured evidence is analyzed by Infermedica&apos;s Diagnosis API, which uses 
                     machine learning models trained on medical data to determine triage levels.
                   </p>
                   <div className="bg-gray-50 p-3 rounded text-sm font-mono">
